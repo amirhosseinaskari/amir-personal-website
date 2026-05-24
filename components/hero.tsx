@@ -37,7 +37,7 @@ export function Hero() {
 
           <div className="flex items-center gap-6">
             <a
-              href="https://linkedin.com/in/amirhossein-askari"
+              href="https://www.linkedin.com/in/amir-askari-54b02416a/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -46,7 +46,7 @@ export function Hero() {
               <Linkedin size={22} />
             </a>
             <a
-              href="https://github.com/amirhossein-askari"
+              href="https://github.com/amirhosseinaskari"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"

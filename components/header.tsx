@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -18,8 +19,14 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-semibold text-foreground">
-          Amir<span className="text-primary">.</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Amirhossein Askari"
+            width={40}
+            height={40}
+            className="rounded"
+          />
         </Link>
 
         {/* Desktop Navigation */}
