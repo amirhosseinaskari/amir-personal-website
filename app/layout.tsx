@@ -9,20 +9,19 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'Amirhossein Askari | Senior Software Engineer',
   description: 'Senior Software Engineer with 8+ years of experience building scalable, high-performance applications using Node.js, React, Next.js, TypeScript, Java, C#, and AWS.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/logo.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/logo.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/logo.png',
+        type: 'image/png',
       },
     ],
     apple: '/apple-icon.png',

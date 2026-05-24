@@ -9,7 +9,7 @@ const featuredProjects = [
     icon: Bot,
     highlighted: true,
     hasVideo: true,
-    videoUrl: "/video01.mov",
+    videoUrl: "/video01.mp4",
     videoPlaceholder: "AI Agent Demo",
   },
   {
