@@ -1,11 +1,6 @@
 [build]
-  command = "pnpm install --frozen-lockfile && pnpm run build"
+  command = "pnpm run build"
   publish = "out"
 
 [build.environment]
   NODE_VERSION = "20"
-  PNPM_VERSION = "9"
-
-# Enable pnpm
-[build.processing]
-  skip_processing = false
