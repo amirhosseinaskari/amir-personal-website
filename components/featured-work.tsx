@@ -9,6 +9,7 @@ const featuredProjects = [
     icon: Bot,
     highlighted: true,
     hasVideo: true,
+    videoUrl: "/video01.mov",
     videoPlaceholder: "AI Agent Demo",
   },
   {
@@ -96,23 +97,37 @@ export function FeaturedWork() {
 
                   {project.hasVideo && (
                     <div className="flex items-center justify-center">
-                      <div className="w-full aspect-video bg-secondary/50 rounded-lg border border-border flex items-center justify-center group cursor-pointer hover:border-primary/50 transition-colors">
-                        <div className="text-center">
-                          <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/30 transition-colors">
-                            <Play
-                              className="text-primary ml-1"
-                              size={28}
-                              fill="currentColor"
-                            />
-                          </div>
-                          <p className="text-sm text-muted-foreground">
-                            {project.videoPlaceholder}
-                          </p>
-                          <p className="text-xs text-muted-foreground/70 mt-1">
-                            Video {index + 1}
-                          </p>
+                      {project.videoUrl ? (
+                        <div className="w-full aspect-video bg-secondary/50 rounded-lg border border-border overflow-hidden hover:border-primary/50 transition-colors">
+                          <video
+                            className="w-full h-full object-cover"
+                            controls
+                            preload="metadata"
+                          >
+                            <source src={project.videoUrl} type="video/mp4" />
+                            <source src={project.videoUrl} type="video/quicktime" />
+                            Your browser does not support the video tag.
+                          </video>
                         </div>
-                      </div>
+                      ) : (
+                        <div className="w-full aspect-video bg-secondary/50 rounded-lg border border-border flex items-center justify-center group cursor-pointer hover:border-primary/50 transition-colors">
+                          <div className="text-center">
+                            <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/30 transition-colors">
+                              <Play
+                                className="text-primary ml-1"
+                                size={28}
+                                fill="currentColor"
+                              />
+                            </div>
+                            <p className="text-sm text-muted-foreground">
+                              {project.videoPlaceholder}
+                            </p>
+                            <p className="text-xs text-muted-foreground/70 mt-1">
+                              Video {index + 1}
+                            </p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
