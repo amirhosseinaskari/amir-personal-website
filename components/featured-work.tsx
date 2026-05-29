@@ -20,6 +20,7 @@ const featuredProjects = [
     icon: Workflow,
     highlighted: true,
     hasVideo: true,
+    videoUrl: "/video02.mp4",
     videoPlaceholder: "Workflow Editor Demo",
   },
   {
